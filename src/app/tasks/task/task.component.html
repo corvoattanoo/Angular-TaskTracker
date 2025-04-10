@@ -1,10 +1,12 @@
+<app-card>
 <article>
-    <h2>TASK TITLE</h2>
-    <time datetime="">TIME</time>
-    <p>SUMMARY</p>
+    <h2>{{task.title}}</h2>
+    <time>{{task.dueDate | date}}</time> 
+    <!-- Pipes nasil calistigina bak docs da farkli farkli gosterimleri var -->
+    <p>{{task.summary}}</p>
     <p class="actions">
-        <button>Complete</button>
+        <button (click)="OnCompleteTask()">Complete</button>
     </p>
 </article>
+</app-card>
 
-<h2>A Task!</h2>
